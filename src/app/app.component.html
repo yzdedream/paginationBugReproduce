@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngFor="let string of displayedList">
+  {{string}}
+</div>
+
+<pagination
+  [totalItems]="totalItems"
+  [(ngModel)]="currentPage"
+  (pageChanged)="pageChanged($event)"
+  itemsPerPage="2">
+</pagination>
+
+<button (click)="onClick()">
+  bug
+</button>
